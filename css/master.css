@@ -1043,107 +1043,191 @@ display: block;
 /* End Conact us page */
 /* Start @Media */
 /* Start Media Header */
-@media (max-width:768px){
+@media  (max-width:479px){
     header{
-        min-width: 768px;
+        max-width: 768px;
         display: flex;
-        justify-content: space-evenly;
+    }
+    header .info  li{
+    margin-right: 6px;
+    padding-right: 6px;
+    color: #a7a7a7;
+    font-size: 11px;
+    position: relative;
+    }
+    .linar{
+        max-width: 768px;
+    }
+    header .social{
+        display: none;
     }
     .linar ul li:last-child{
         display: none;
     }
-   
-    .featured .container .rows .row-one{
-        width: 260px;
+    .linar > a{
+        padding-left: 6px;
     }
-    .featured .rows .row-two {
-        margin-right: 20px;
-    }
-    .featured .container .rows .row-three .info-table{
-        max-width: 250px; 
-    }
-    .featured .container .rows .row-three .info-table ul li img{
-        margin-right: 15px;
-        width: 50px;
-    }
-    .video .container .video-view img{
-        position: absolute;
-        top: 258px;
-        left: 160px;
-    }
-    .video .container .video-view a{
-        position: absolute;
-        top: 42%;
-    }
-    .container{
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    .excper ul li{
-margin-right: 10px;
-padding-right: 10px;
-    }
-    .excper ul li h2{
-        margin-right: 10px;
-    }
-    .excper ul li::after{
-        content: '';
-        position: relative;
-        width: 35px;
-        height: 35px;
-    }
-    .project .container .rows .row-one .button {
-        display: flex;
-    }
-    .project .container .rows .row-two img{
-        width: 106%;
-        padding: 0 30px;
-    }        
-    .project .container .rows .row-two .information {
-        max-width: 200px;
-        margin-right: 50px;
 
-    } 
-    .project .container .rows .row-two .information ul{
-        min-width: 240px;
-    }
-    .project .container .rows .row-two .information ul li:not(:last-child){
-    margin-bottom: 23px;
-    padding-bottom: 23px;
-    font-size: 13px;
-    font-weight: bold;
-    }
-    .project .container .rows .row-two .information ul li:last-child{
-        font-size: 13px;
-        font-weight: bold;
-    }
-    .project .container .rows .row-two .information ul li span{
-        font-size: 15px;
-        text-align: end;
-    }
-    .project .container .rows .row-two .info  {
-    display: none;    
-    }
-    .sign .icone {
+    .linar .icone  ul{
         display: flex;
-        flex-direction: column;
-    }
-    .sign .icone{
-        margin-right: 24px;
-    }
-    .sign .icone .call,
-    .sign .icone .email{
-      margin-right: 15px;  
-    }
-    .sign .icone .email{
-        margin-top: 10px;
-    }
-    .sign .form {
-        min-width: 285px;
-    }
-    .sign .form form input{
-        width: 284px;
-    }
+         flex-direction: column;
+         z-index:-1;
+         position: absolute;
+         right: 30px;
+         top: 26px;
+         background-color: #36320863;
+         border-radius: 10px;
+         opacity: 0;
+         transition:1s;
+     }
+     .linar  ul li{
+         margin: 6px;
+         padding: 10px ;
+         line-height: 30px;
+         cursor: pointer;
+         color: #141212;   
+         transition: 0.5s; 
+     }
+     .linar  ul li:hover{
+     background-color: #c3c3c3c7;
+     border-radius: 10px;
+     }
+     .linar  ul li:hover a{
+         color: #ffffff;
+     }
+     .linar ul li:not(:nth-child(4)){
+         border-bottom: 1px solid #ddd;
+     }
+     .linar  ul li a{
+         margin: 0;
+         font-size: 20px;
+         font-weight: bold;
+         transition: 0.7s;
+     
+     }
+     .linar  ul li:last-child{
+         display: none;
+     }
+     .linar .media{
+         position: absolute;
+         padding: 0;
+         top: 16px;
+         left: 27px;
+     }
+     .linar {
+       position: relative;
+     }
+     .linar .icone .drop-down{
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         border: 2px solid var(--color-orange);
+         position: absolute;
+         right: 25px;
+         top: 11px;
+     }
+     .linar .icone .drop-down::before{
+         content: '';
+         width: 20px;
+         height: 20px;
+         background-color: var(--color-orange);
+         position: absolute;
+         left: 3px;
+         top: 3px;
+         border-radius: 50%;  
+     }
+     .linar .icone:hover ul{
+         opacity: 1;
+         z-index: 100;
+         }
+
+   .item{
+    max-width: 768px;
+    height: 29vh;
+    display: flex;
+        justify-content: end;
+    
+   }
+   .item .text{
+    max-width: fit-content;
+   }
+   .item .text h2{
+    max-width: fit-content;
+    font-size: 19px;
+    line-height: 31px;
+   }
+   .item .left,
+   .item .right{
+    width: 40px;
+    height: 40px;
+   }
+   .item .left i,
+   .item .right i{
+    font-size: 20px;    
+   }
+ .featured .container{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 25px;
+ }
+ .featured .container .rows{
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    max-width: 768px;
+ }
+ .featured .container .rows .row-one {
+    max-width: 100%;
+ }
+ .featured .container .rows .row-one img:not(:last-child){
+    max-width:  768px;
+ }
+    
+ .featured .container .rows .row-two .section-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 768px;
+    margin-top: 20px;
+    padding-top: 20px;
+ }
+ .featured .container .rows .row-two .section-heading  h2{
+    width: 265px;
+    margin-bottom: 20px;
+ }
+ .featured .container .rows .row-two .section-heading .accordion{
+    width: 275px;
+    margin-bottom: 40px;
+ }
+ .featured .container .rows .row-three .info-table{
+    width: 306px;
+    padding-left: 1px;
+}
+.video .video-child {
+    width: 768px;
+    background-size: contain;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.video .video-text .text span{
+font-size: 13px;
+}
+.video .video-text .text h3{
+    font-size: 20px;
+}
+.video .container .video-view img{
+    position: absolute;
+    left: 37px;
+    top: 197px;
+    width: 323px;
+}
+.video .container .video-view a {
+    position: relative;
+    bottom: 324px;
+    left: 61px;
+}
+
 }
 
 /* Stop and Russem  */
@@ -1526,8 +1610,6 @@ left: 21px;
     margin-top: 20px;
     padding-top: 15px;
 }
-/*  End page propert  */
-
 }
 
 /* End @Media */
